@@ -20,9 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-//    self.wantsFullScreenLayout = YES;
-    [ UIApplication sharedApplication ].statusBarStyle = UIStatusBarStyleBlackTranslucent;
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake(60, 100, 200, 50);
@@ -34,17 +31,18 @@
     _statusBarView = [[LoadingStatusBarView alloc] initWithController:self];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (void)tapButton:(id)sendar {
     if ([[UIApplication sharedApplication] isStatusBarHidden]) {
         [_statusBarView showStatusBar];
     } else {
         [_statusBarView dismissStatusBar:@"now loading..."];
     }
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
