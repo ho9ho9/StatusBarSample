@@ -32,12 +32,11 @@
         controller.wantsFullScreenLayout = YES;
         CGRect mainFrame = CGRectMake(0, h, controller.view.bounds.size.width, controller.view.bounds.size.height);
         UIView *mainView = [[UIView alloc] initWithFrame:mainFrame];
-        mainView.backgroundColor = controller.view.backgroundColor;
+        mainView.backgroundColor = [UIColor whiteColor];
         for (UIView *v in [controller.view subviews]) {
             [v removeFromSuperview];
             [mainView addSubview:v];
         }
-        [controller.view addSubview:mainView];
         mainView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
          // status view
         self.backgroundColor = [UIColor blackColor];
@@ -53,7 +52,7 @@
         [self addSubview:_rectView];
         
         [controller.view addSubview:self];
-        [controller.view sendSubviewToBack:self];
+        [controller.view addSubview:mainView];
     }
     return self;
 }
