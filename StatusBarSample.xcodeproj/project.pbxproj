@@ -19,6 +19,8 @@
 		5AA14857175ADE830079B126 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA14855175ADE830079B126 /* MainStoryboard_iPhone.storyboard */; };
 		5AA1485A175ADE830079B126 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA14858175ADE830079B126 /* MainStoryboard_iPad.storyboard */; };
 		5AA1485D175ADE830079B126 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA1485C175ADE830079B126 /* ViewController.m */; };
+		5AA14865175AF3D10079B126 /* LoadingStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA14864175AF3D10079B126 /* LoadingStatusBarView.m */; };
+		5AA14867175B03C20079B126 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA14866175B03C20079B126 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		5AA14859175ADE830079B126 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		5AA1485B175ADE830079B126 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5AA1485C175ADE830079B126 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5AA14863175AF3D10079B126 /* LoadingStatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingStatusBarView.h; sourceTree = "<group>"; };
+		5AA14864175AF3D10079B126 /* LoadingStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingStatusBarView.m; sourceTree = "<group>"; };
+		5AA14866175B03C20079B126 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA14867175B03C20079B126 /* QuartzCore.framework in Frameworks */,
 				5AA1483E175ADE830079B126 /* UIKit.framework in Frameworks */,
 				5AA14840175ADE830079B126 /* Foundation.framework in Frameworks */,
 				5AA14842175ADE830079B126 /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +81,7 @@
 		5AA1483C175ADE830079B126 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AA14866175B03C20079B126 /* QuartzCore.framework */,
 				5AA1483D175ADE830079B126 /* UIKit.framework */,
 				5AA1483F175ADE830079B126 /* Foundation.framework */,
 				5AA14841175ADE830079B126 /* CoreGraphics.framework */,
@@ -92,6 +99,8 @@
 				5AA1485B175ADE830079B126 /* ViewController.h */,
 				5AA1485C175ADE830079B126 /* ViewController.m */,
 				5AA14844175ADE830079B126 /* Supporting Files */,
+				5AA14863175AF3D10079B126 /* LoadingStatusBarView.h */,
+				5AA14864175AF3D10079B126 /* LoadingStatusBarView.m */,
 			);
 			path = StatusBarSample;
 			sourceTree = "<group>";
@@ -180,6 +189,7 @@
 				5AA1484A175ADE830079B126 /* main.m in Sources */,
 				5AA1484E175ADE830079B126 /* AppDelegate.m in Sources */,
 				5AA1485D175ADE830079B126 /* ViewController.m in Sources */,
+				5AA14865175AF3D10079B126 /* LoadingStatusBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,10 +284,12 @@
 		5AA14861175ADE830079B126 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: YASUSUKE NOZUE (K2UVD9V5PX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatusBarSample/StatusBarSample-Prefix.pch";
 				INFOPLIST_FILE = "StatusBarSample/StatusBarSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "162CC6D1-C653-4AB3-BA36-4A90DF1A9E0B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -285,10 +297,12 @@
 		5AA14862175ADE830079B126 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: YASUSUKE NOZUE (K2UVD9V5PX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatusBarSample/StatusBarSample-Prefix.pch";
 				INFOPLIST_FILE = "StatusBarSample/StatusBarSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "162CC6D1-C653-4AB3-BA36-4A90DF1A9E0B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
